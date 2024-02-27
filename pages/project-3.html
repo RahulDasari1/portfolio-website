@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating Stunning Neubrutalism Card with HTML and CSS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&display=swap");
+
+      body {
+        background-image: url(../assets/sale-ide.jpg);
+        /* background: #ffde2b; */
+        font-family: "Darker Grotesque", sans-serif;
+      }
+      .container {
+        margin: 100px auto;
+        max-width: 600px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        filter: drop-shadow(8px 8px 0px #000);
+        padding: 20px;
+        border: 4px solid #000;
+      }
+      .card h1 {
+        margin: 0;
+        font-size: 42px;
+        letter-spacing: 2px;
+      }
+      .card p {
+        font-size: 18px;
+      }
+      .button-container {
+        text-align: right;
+      }
+      button {
+        margin: 0 5px;
+        background: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 6px;
+        border: 3px solid #000;
+        box-shadow: 5px 5px 0px 0px #570000;
+        cursor: pointer;
+      }
+      button.green {
+        background: #000000;
+        color: #ffffff;
+      }
+
+      button:active {
+        transform: translateY(4px);
+        box-shadow: 1px 2px 0px 0px #000;
+      }
+      .codebox {
+        padding: 10px;
+        border: 1px solid gray;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1 style="text-align: center">E-Commerce Website Project</h1>
+        <div>
+          <br /><img
+            align="middle"
+            src="../assets/ecommerce.png"
+            alt=""
+            width="50%"
+          /><img align="middle" src="../assets/E-Commerce-website.png" alt="" width="50%" />
+        </div>
+
+        <p>
+          The project is aimed at creating a fully functional e-commerce website
+          where users can browse products, add them to their cart, make
+          purchases, and manage their accounts.
+        </p>
+        <h3>Features</h3>
+        <p>
+          1. User authentication: Users can sign up, log in, and manage their
+          accounts. <br />
+          2. Product browsing: Users can view products, search for specific
+          items, and filter products by category. <br />
+          3. Shopping cart: Users can add products to their cart, update
+          quantities, and remove items. <br />
+          3. Checkout process: Users can proceed to checkout, enter shipping and
+          billing information, and complete purchases. <br />
+          4. Order management: Users can view their order history and track the
+          status of their orders. <br />
+          5. Admin panel: Admin users have access to an admin panel where they
+          can manage products, categories, orders, and user accounts. <br />
+        </p>
+        <h3>Technologies Used</h3>
+        <p>
+        1. Frontend: HTML, CSS, JavaScript, React.js <br />
+          2. Backend: PHP <br />
+          3. Authentication: JSON Web Tokens (JWT) <br />
+          4. Payment Gateway Integration: (Specify if any) <br />
+          5. Deployment: (Specify if any, e.g., Github, etc.) <br />
+        </p>
+
+        <div class="codebox">
+            <img src="../assets/webpage1.png" alt="" width="100%">
+        </div>
+        <br>
+        <div class="codebox">
+            <img src="../assets/webpage2.png" alt="" width="100%">
+        </div>
+        <br>
+        <div class="button-container">
+          <a
+            href="https://github.com/RahulDasari1/ecommercewebiste/"
+          >
+            <button class="green">Know more</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
