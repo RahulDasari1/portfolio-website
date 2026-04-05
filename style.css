@@ -104,6 +104,20 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+/* make hamburger menu panel scrollable on small screens */
+.menu-links.open {
+  /* allow the menu to expand but not exceed viewport */
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 12px;
+}
+
+.menu-links::-webkit-scrollbar{width:8px}
+.menu-links::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:6px}
+
+.menu-links a{display:block;padding:10px 12px;color:var(--text,black);}
+
 .menu-links a {
   display: block;
   padding: 10px;
@@ -150,7 +164,7 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: auto;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -430,3 +444,16 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* Featured continuous marquee slider */
+.customer-logos{overflow:hidden;position:relative;padding:24px 0;background:transparent}
+.customer-logos .track{display:flex;gap:48px;align-items:center}
+.customer-logos .slide{flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:8px}
+.customer-logos .slide img{max-height:120px;object-fit:contain;filter:grayscale(0);opacity:0.95}
+.customer-logos.marquee .track{animation:marquee var(--marquee-duration,4s) linear infinite}
+.customer-logos{--marquee-translate:50%}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--marquee-translate,50%)))}}
+.customer-logos .track:hover{animation-play-state:paused}
+
+@media(max-width:720px){.customer-logos .slide img{max-height:80px;gap:24px}}
+@media(max-width:520px){.customer-logos .slide img{max-height:60px;gap:16px}}
